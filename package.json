@@ -1,0 +1,19 @@
+{
+  "name": "com.archnet.extension.canvas",
+  "version": "1.0.0",
+  "displayName": "Arch Net Extension Canvas",
+  "description": "Extension to manage Canvas component of UI GameObject",
+  "unity": "2020.1",
+  "unityRelease": "0b5",
+  "keywords": [
+    "Arch",
+    "ArchNet",
+    "Extension",
+    "Canvas",
+    "Custom"
+  ],
+  "author": {
+    "name": "Arch Net",
+    "email": "archnetmodule@gmail.com"
+  }
+}
