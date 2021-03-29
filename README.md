@@ -6,7 +6,7 @@
     <img src="https://archnet-plateform.fr/images/ArchNetLogoWithBck.png" alt="Logo" width="300">
   </a>
 
-  <h3 align="center">Extension Rotation</h3>
+  <h3 align="center">Extension Canvas</h3>
 </p>
 
 
@@ -45,11 +45,10 @@ That all folks !
 <!-- Usage -->
 ## usage
 
-This extension is a simple script to manage your gameobject to be rotated.
-You can call two public methods to :
-- Active your Script : ActiveRotation
-- Desactive your rotation : DesactiveRotation
-- Check if the script is Active : IsActive
+This extension is a simple script to manage your canvas component.
+You can call public methods to :
+- put the canvas component in the first sorting layer : SetCanvasToForeground
+- stop overriding the canvas component : StopOverridingCanvas
 
 Get the github HTTPS project url and load it in Unity Package Manager windows
 
@@ -60,10 +59,6 @@ in Unity : Windows -> Package Manager -> + -> Add package from git url
 1. Get the github HTTPS project url and load it in Unity Package Manager windows
 in Unity : Windows -> Package Manager -> + -> Add package from git url
 2. Clone the repo
-3. Drag the script into your gameobject
-4. Select the speed of your rotation
-5. Define if the rotation is forward or not
-6. Define if the rotation is automatique or eventable (Call  : ActiveRotation & DesactiveRotation)
 7. Enjoy !
 
 <!-- CONTACT -->
