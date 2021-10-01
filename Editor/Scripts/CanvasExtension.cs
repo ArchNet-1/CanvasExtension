@@ -4,7 +4,7 @@ namespace ArchNet.Extension.ReverseMask2D
 {
 	/// <summary>
 	/// [EXTENSION] - [ARCH NET] - [CANVAS] Canvas Extension Main Script
-	/// author : Emma Mousson
+	/// author : Louis PAKEL
 	/// </summary>
 	public static class CanvasExtension
 	{
