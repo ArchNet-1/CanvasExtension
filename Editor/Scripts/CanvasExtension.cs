@@ -1,34 +1,90 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.UI;
 
-namespace ArchNet.Extension.ReverseMask2D
+namespace ArchNet.Extension.Canvases
 {
-	/// <summary>
-	/// [EXTENSION] - [ARCH NET] - [CANVAS] Canvas Extension Main Script
-	/// author : Louis PAKEL
-	/// </summary>
-	public static class CanvasExtension
-	{
-		#region Public Methods
+    /// <summary>
+    /// [EXTENSION] - [ARCH NET] - [CANVAS] Canvas Extension
+    /// author : Louis PAKEL
+    /// </summary>
+    public static class CanvasExtension
+    {
+        private static int higherSortingOrder = 1;
+        
+        /// <summary>
+        /// Put Canvas to higher layer (foreground)
+        /// </summary>
+        /// <param name="canvas"></param>
+        public static void SetCanvasToForeground(this Canvas canvas)
+        {
+            if (canvas == null)
+                return;
 
-		/// <summary>
-		/// Activate override sorting of fiven canvas and set his sorting order to max value
-		/// </summary>
-		/// <param name="pCanvas"></param>
-		public static void SetCanvasToForeground(Canvas pCanvas)
-		{
-			pCanvas.overrideSorting = true;
-			pCanvas.sortingOrder = 32767; // Biggest value, always in first plan
-		}
+            canvas.overrideSorting = true;
+            canvas.sortingOrder = higherSortingOrder;
+            higherSortingOrder++;
+        }
 
-		/// <summary>
-		/// Reset sorting order of given canvas to 0 and stop overriding sorting
-		/// </summary>
-		/// <param name="pCanvas"></param>
-		public static void StopOverridingCanvas(Canvas pCanvas)
-		{
-			pCanvas.sortingOrder = 0;
-			pCanvas.overrideSorting = false;
-		}
-		#endregion
-	}
+        /// <summary>
+        /// Put Canvas to default layer (0)
+        /// </summary>
+        /// <param name="canvas"></param>
+        public static void SetCanvasToDefault(this Canvas canvas)
+        {
+            if (canvas == null)
+                return;
+            
+            canvas.overrideSorting = false;
+            canvas.sortingOrder = 0;
+
+            GraphicRaycaster graphicRaycaster = canvas.gameObject.GetComponent<GraphicRaycaster>();
+            if (graphicRaycaster != null)
+                Object.Destroy(graphicRaycaster);
+        }
+
+        
+        /// <summary>
+        /// Modify CanvasGroup to be invisible and not interactable
+        /// </summary>
+        /// <param name="canvasGroup"></param>
+        public static void SetInvisible(this CanvasGroup canvasGroup)
+        {
+            if (canvasGroup == null)
+                return;
+
+            canvasGroup.alpha = 0f;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+        }
+
+
+        /// <summary>
+        /// Modify CanvasGroup to be visible and  interactable
+        /// </summary>
+        /// <param name="canvasGroup"></param>
+        public static void SetVisible(this CanvasGroup canvasGroup)
+        {
+            if (canvasGroup == null)
+                return;
+
+            canvasGroup.alpha = 1f;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
+
+        /// <summary>
+        /// Refresh a full canvas layouts (included children)
+        /// This can be useful for adjusting background of a Button if dynamic text change (localize, data etc)
+        /// </summary>
+        /// <param name="canvas"></param>
+        public static void RefreshCanvas(this Canvas canvas)
+        {
+            if (canvas == null)
+                return;
+
+            RectTransform rectTransform = canvas.gameObject.GetComponent<RectTransform>();
+            if (rectTransform)
+                LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
+        }
+    }
 }
