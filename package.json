@@ -4,6 +4,7 @@
   "displayName": "ArchNet - Canvas Extension",
   "description": "Extension methods for Canvas and CanvasGroup: bring a canvas to the front, reset its sorting, show or hide a group, rebuild a layout.",
   "unity": "6000.0",
+  "license": "MIT",
   "documentationUrl": "https://archnet-plateform.fr/#CanvasExtension",
   "changelogUrl": "https://github.com/ArchNet-1/CanvasExtension/blob/main/CHANGELOG.md",
   "licensesUrl": "https://github.com/ArchNet-1/CanvasExtension/blob/main/LICENSE.md",
