@@ -1,19 +1,20 @@
 {
   "name": "com.archnet.extension.canvas",
-  "version": "1.0.0",
-  "displayName": "Arch Net Extension Canvas",
-  "description": "Extension to manage Canvas component of UI GameObject",
-  "unity": "2020.1",
-  "unityRelease": "0b5",
+  "version": "2.0.0",
+  "displayName": "ArchNet - Canvas Extension",
+  "description": "Extension methods for Canvas and CanvasGroup: bring a canvas to the front, reset its sorting, show or hide a group, rebuild a layout.",
+  "unity": "6000.0",
+  "documentationUrl": "https://archnet-plateform.fr/#CanvasExtension",
+  "changelogUrl": "https://github.com/ArchNet-1/CanvasExtension/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/ArchNet-1/CanvasExtension/blob/main/LICENSE.md",
   "keywords": [
-    "Arch",
-    "ArchNet",
-    "Extension",
-    "Canvas",
-    "Custom"
+    "archnet",
+    "extension",
+    "canvas"
   ],
   "author": {
-    "name": "Arch Net",
-    "email": "archnetmodule@gmail.com"
+    "name": "ArchNet",
+    "email": "archnetmodule@gmail.com",
+    "url": "https://archnet-plateform.fr"
   }
 }
