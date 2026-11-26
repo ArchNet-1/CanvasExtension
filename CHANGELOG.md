@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.1.0] - 2026-11-25
+
+### Added
+- `SafeArea`, `ResponsiveCanvas`, `ResponsiveSwitch` and `DeviceInfo` (phone / tablet / desktop, orientation).
+- ArchNet Hub service **Responsive UI**: makes every canvas of the ArchNet prefabs and scenes responsive (screens nested in another prefab are handled in their own prefab); Responsive UI window (Device Simulator, your own canvases, mobile orientations).
+- Edit Mode tests.
+
+### Changed
+- References `UnityEngine.UI` explicitly.
+
 ## [2.0.0] - 2026-11-25
 
 Unity 6 release.

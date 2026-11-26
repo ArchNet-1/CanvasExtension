@@ -1,7 +1,9 @@
 {
     "name": "ArchNet.Extension.Canvas",
     "rootNamespace": "ArchNet.Extension",
-    "references": [],
+    "references": [
+        "UnityEngine.UI"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

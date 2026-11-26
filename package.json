@@ -1,8 +1,8 @@
 {
   "name": "com.archnet.extension.canvas",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "displayName": "ArchNet - Canvas Extension",
-  "description": "Extension methods for Canvas and CanvasGroup: bring a canvas to the front, reset its sorting, show or hide a group, rebuild a layout.",
+  "description": "Responsive UI for phones, tablets and computers (Safe Area, Responsive Canvas, Responsive Switch, device kind), applied to every ArchNet screen in one click with the ArchNet Hub; plus extension methods for Canvas and CanvasGroup.",
   "unity": "6000.0",
   "license": "MIT",
   "documentationUrl": "https://archnet-plateform.fr/#CanvasExtension",

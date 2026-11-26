@@ -1,0 +1,29 @@
+{
+    "name": "ArchNet.Extension.Canvas.Recipe",
+    "rootNamespace": "ArchNet.Extension.Editor",
+    "references": [
+        "ArchNet.Extension.Canvas",
+        "ArchNet.Core.Recipe",
+        "ArchNet.Installer.Editor",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "ARCHNET_HUB"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.archnet.hub",
+            "expression": "2.0.0",
+            "define": "ARCHNET_HUB"
+        }
+    ],
+    "noEngineReferences": false
+}
